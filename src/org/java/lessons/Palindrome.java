@@ -5,23 +5,14 @@ import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("inserisci una parola");
-        String parola = scan.nextLine();
-        boolean isPalindroma = isPalindroma(parola);
-        if (isPalindroma) {
-            System.out.println("La parola " + parola + " è palindroma");
-        } else {
-            System.out.println("La parola " + parola + " non è palindroma");
+        System.out.println("inserisci un numero a quattro cifre");
+        int number = scan.nextInt();
+        int sum = 0;
+        while (number > 0) {
+            sum = sum + number%10;
+            number= number/10;
         }
-
-    }
-    private static boolean isPalindroma(String parola) {
-        String parolaInvertita = "";
-
-        for (int i = parola.length() - 1; i >= 0; i--) {
-            parolaInvertita += parola.charAt(i);
-        }
-        return parola.equalsIgnoreCase(parolaInvertita);
+        System.out.println(sum);
     }
 }
 
