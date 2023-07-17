@@ -4,17 +4,25 @@ import java.util.Scanner;
 
 public class Palindrome {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("inserisci un numero a quattro cifre");
-        int number = scan.nextInt();
-        int sum = 0;
-        while (number > 0) {
-            sum = sum + number%10;
-            number= number/10;
+
+        double somma = 0;
+        double media;
+
+
+        for (int i = 1; i < 11; i++) {
+            somma += i;
         }
-        System.out.println(sum);
+        System.out.println(" la somma dei primi numeri è " + somma);
+
+
+        media = somma / 10;
+        System.out.println("la media dei numeri è " + media);
     }
 }
+
+
+
+
 
 
 
